@@ -1,16 +1,14 @@
-# This is a sample Python script.
+from fastapi import FastAPI
+from src.api.v1.endpoints import user, journal, chat
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+app = FastAPI()
 
+# app.include_router(chat.router, prefix="/chat", tags=["chat"])
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Pregnancy Tracker API"}
 
+app.include_router(user.router, prefix="/users", tags=["users"])
+app.include_router(journal.router, prefix="/journals", tags=["journals"])
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
