@@ -17,6 +17,7 @@ class User(Base):
     username = Column(String, unique=True, index=True, nullable=False)
     hashed_password = Column(String, nullable=False)
     role = Column(Enum('woman', 'doctor', name='user_roles'), nullable=False)
+    days_pregnant = Column(Integer, nullable=True)
     num_of_pregnancies = Column(Integer, nullable=False)
     num_of_failed_pregnancies = Column(Integer, nullable=False)
     first_time_pregnancy = Column(Boolean, nullable=False)

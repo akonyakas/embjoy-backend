@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from enum import Enum
 
+
 class MedConditionsEnum(str, Enum):
     diabetes = 'diabetes'
     high_blood_pressure = 'high blood pressure'
@@ -14,6 +15,7 @@ class MedConditionsEnum(str, Enum):
 class UserBase(BaseModel):
     username: str
     role: str
+    days_pregnant: int
     num_of_pregnancies: int
     num_of_failed_pregnancies: int
     first_time_pregnancy: bool
@@ -39,4 +41,4 @@ class UserOut(UserBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True

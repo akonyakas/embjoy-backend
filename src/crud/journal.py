@@ -34,6 +34,3 @@ def get_journal_entry(db: Session, journal_id: int, user_id: int):
         Journal.id == bindparam('journal_id', value=journal_id),
         Journal.user_id == bindparam('user_id', value=user_id)
     ).first()
-
-
-

@@ -4,10 +4,11 @@ from sqlalchemy.orm import sessionmaker, Session
 
 from src.config import get_db_url
 
-engine = create_engine(get_db_url(), connect_args={"check_same_thread": False})
+engine = create_engine(get_db_url())
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+Base.metadata.create_all(bind=engine)
 
 
 def get_db():
