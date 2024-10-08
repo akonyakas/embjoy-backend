@@ -5,7 +5,7 @@
 Embryo Journey is a user-friendly mobile application designed to support expectant mothers by providing personalized health content and tools aimed at reducing maternal mortality rates. Our app leverages modern technologies to ensure efficiency, scalability, and security in handling sensitive health data.
 
 
-<img src="IMG_6404.PNG" alt="App Screenshot 3" height="600"/>
+<img src="screen.jpg" alt="App Screenshot 3" height="600"/>
 
 ## Key Features
 
