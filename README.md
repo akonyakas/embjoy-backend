@@ -70,4 +70,7 @@ To set up and run the Embryo Journey application, follow these steps:
     uvicorn main:app --reload
 
 
+## Contact
+
+For questions or support, please reach out to [Your Name](aiganymkass@gmail.com).
 
